@@ -100,7 +100,7 @@ if($method == "GET"){
         echo json_encode($base_array, JSON_FORCE_OBJECT);
     }
     else{
-        echo json_ecode("{}");
+        echo json_encode("{}");
     }
 }
 
