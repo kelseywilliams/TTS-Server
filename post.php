@@ -6,7 +6,7 @@ $config = include("config.php");
 // Keep out the weirdos
 $method = $_SERVER["REQUEST_METHOD"];
 if($method != "post"){
-    header("Location: /TTS-Server/", 301);
+    header("Location: /", 301);
 }
 
 // Connect to the mysql database
@@ -36,5 +36,5 @@ $stmt->execute();
 $stmt->close();
 
 $_SESSION["success"] = "Post successfully created!";
-header("Location: /TTS-Server/", 301);
+header("Location: /", 301);
 ?>

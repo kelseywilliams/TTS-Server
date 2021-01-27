@@ -4,7 +4,6 @@
         <title>TTS-Server</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-
         <script>
             (function() {
             var httpRequest;
@@ -30,12 +29,20 @@
             makeRequest();
             })();
         </script>
+        <style>
+            .msg{
+                border-color: black;
+            }
+        </style>
     </head>
     <body>
-            <form action="/TTS-Server/post.php" method="post">
+            <form action="/post.php" method="post">
                 <textarea name="data" rows="4" cols="30" ></textarea>
                 <button type="submit">Send</button>
             </form>
+            <div id="msgs">
+            </div>
     </body>
     
+    <script src="/scripts.js"></script>
 </html>
