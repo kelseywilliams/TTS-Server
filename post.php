@@ -23,7 +23,7 @@ if ($mysqli->connect_error) {
 $data = $_POST["data"];
 
 // Get the date
-$date = date(DATE_W3C);
+$date = $_POST["time"];
 
 // Set the charset of the sql server so that we can accept emojis
 $mysqli->set_charset("utf8mb4");

@@ -4,45 +4,17 @@
         <title>TTS-Server</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <script>
-            (function() {
-            var httpRequest;
-            function makeRequest() {
-                httpRequest = new XMLHttpRequest();
-
-                if (!httpRequest) {
-                    alert('Giving up :( Cannot create an XMLHTTP instance');
-                    return false;
-                }
-                httpRequest.onreadystatechange = alertContents;
-                httpRequest.open('GET', 'success.php');
-                httpRequest.send();
-            }
-
-            function alertContents() {
-                if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                    if (httpRequest.status === 200 && httpRequest.responseText !== "empty") {
-                        alert(httpRequest.responseText);
-                    }
-                }
-            }
-            makeRequest();
-            })();
-        </script>
-        <style>
-            .msg{
-                border-color: black;
-            }
-        </style>
+        <link href="style.css">
     </head>
     <body>
-            <form action="/post.php" method="post">
-                <textarea name="data" rows="4" cols="30" ></textarea>
-                <button type="submit">Send</button>
+            <form action="post.php" method="post">
+                <textarea name="data" id="data" class="data" rows="5" cols="50" style="font-size: 25px;" placeholder="Type something..." maxlength="255"></textarea>
+                <button type="submit" id="submit" class="submit">Send</button>
+                <input type="hidden" name="time">
             </form>
-            <div id="msgs">
+            <div id="msgs" class="msgs">
             </div>
     </body>
     
-    <script src="/scripts.js"></script>
+    <script src="scripts.js"></script>
 </html>
