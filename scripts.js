@@ -37,7 +37,6 @@ function insertData(uri){
             var msgs = document.getElementById("msgs");
 
             var count = Object.keys(data).length;
-            console.log(count);
             for(var i=count-1; i >= 0; i--){
                 var container = document.createElement("div")
                 container.className = "container";
@@ -46,7 +45,6 @@ function insertData(uri){
                 var t = document.createElement("div");
                 t.className = "time";
                 t.id = i.toString();
-                console.log(data[i]["time"]);
                 var timeText = document.createTextNode(data[i]["time"]);
                 t.appendChild(timeText);
 
@@ -83,5 +81,5 @@ input.addEventListener("keydown", function(event) {
 });
 
 var date = new Date();
-var time = date.toLocaleTimeString();
+var time = date.toLocaleDateString + " " + date.toLocaleTimeString()
 document.forms[0].elements["time"].value = time;
