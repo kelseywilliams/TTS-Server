@@ -81,5 +81,5 @@ input.addEventListener("keydown", function(event) {
 });
 
 var date = new Date();
-var time = date.toLocaleDateString + " " + date.toLocaleTimeString()
+var time = date.toLocaleDateString() + " " + date.toLocaleTimeString()
 document.forms[0].elements["time"].value = time;
