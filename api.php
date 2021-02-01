@@ -6,7 +6,7 @@ For POST requests:
     Structure the post request with an optional password key with a value of *password* in order to alter the read status of posts 
     and a filter key with a value of read, unread, or all
     
-    Structure the post request with a filter key with a value of read, unread, or all
+    Structure the get request with a filter key with a value of read, unread, or all
     
     Data is returned in JSON format*/
 
